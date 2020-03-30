@@ -90,11 +90,11 @@ namespace OculusSampleFramework
             SphereCollider sc = m_player.GetComponentInChildren<SphereCollider>();
             m_maxGrabDistance = sc.radius + 3.0f;
 
-            if(m_parentHeldObject == true)
-            {
-                Debug.LogError("m_parentHeldObject incompatible with DistanceGrabber. Setting to false.");
-                m_parentHeldObject = false;
-            }
+            //if(m_parentHeldObject == true)
+            //{
+            //    Debug.LogError("m_parentHeldObject incompatible with DistanceGrabber. Setting to false.");
+            //    m_parentHeldObject = false;
+            //}
 
             DistanceGrabber[] grabbers = FindObjectsOfType<DistanceGrabber>();
             for (int i = 0; i < grabbers.Length; ++i)
