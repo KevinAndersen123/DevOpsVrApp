@@ -120,13 +120,13 @@ public class OVRScreenFade : MonoBehaviour
 	public void FadeOut()
     {
         StartCoroutine(Fade(0,1));
-    }
 
+    }
 
 	/// <summary>
 	/// Starts a fade in when a new level is loaded
 	/// </summary>
-	void OnLevelFinishedLoading(int level)
+	public void OnLevelFinishedLoading(int level)
 	{
 		StartCoroutine(Fade(1,0));
 	}
@@ -184,8 +184,8 @@ public class OVRScreenFade : MonoBehaviour
             currentAlpha = Mathf.Lerp(startAlpha, endAlpha, Mathf.Clamp01(elapsedTime / fadeTime));
             SetMaterialAlpha();
 			yield return new WaitForEndOfFrame();
-		}
-	}
+        }
+    }
 
     /// <summary>
     /// Update material alpha. UI fade and the current fade due to fade in/out animations (or explicit control)
