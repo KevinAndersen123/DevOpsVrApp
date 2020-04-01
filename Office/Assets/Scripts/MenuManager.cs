@@ -21,6 +21,8 @@ public class MenuManager : MonoBehaviour
         GetComponent<OVRScreenFade>().OnLevelFinishedLoading(0);
         canvas.SetActive(false);
         WelcomeText.SetActive(true);
+        helpCanvas.SetActive(false);
+        helpActive = false;
     }
     public void Quit()
     {
